@@ -4,17 +4,17 @@
     <%= form.text_field :name %>
   </div>
 
- <div>
-    <%= form.label :description, style: "display: block" %>
+  <div>
+    <%= form.label :description %>
     <%= form.rich_text_area :description %>
   </div>
 
- <div>
-    <%= form.label :featured_image, style: "display: block" %>
+  <div>
+    <%= form.label :featured_image %>
     <%= form.file_field :featured_image, accept: "image/*" %>
   </div>
 
   <div>
-    <%= form.submit %>
+    <%= form.submit "Save Product", class: "submit-button" %>
   </div>
 <% end %>

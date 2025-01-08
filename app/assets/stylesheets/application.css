@@ -1,10 +1,404 @@
-/*
- * This is a manifest file that'll be compiled into application.css.
- *
- * With Propshaft, assets are served efficiently without preprocessing steps. You can still include
- * application-wide styles in this file, but keep in mind that CSS precedence will follow the standard
- * cascading order, meaning styles declared later in the document or manifest will override earlier ones,
- * depending on specificity.
- *
- * Consider organizing styles into separate files for maintainability.
- */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 1rem;
+    background-color: #f9f9f9;
+    color: #333;
+  }
+  
+  nav.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1rem;
+  }
+  
+  nav.menu a,
+  nav.menu button {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+    font-size: 1em;
+    margin: 0 0.5rem;
+    transition: color 0.2s ease, background-color 0.2s ease;
+  }
+  
+  nav.menu a:hover,
+  nav.menu button:hover {
+    color: #ffffff;
+    background-color: #007bff;
+    border-radius: 4px;
+    padding: 0.25rem 0.5rem;
+  }
+  
+  nav.menu button {
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  nav.menu .sign_in {
+    margin-left: auto;
+  }
+  
+  .notice,
+  .alert {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  
+  .notice {
+    color: green;
+  }
+  
+  .alert {
+    color: red;
+  }
+   /* CSS dành cho tiêu đề và liên kết tạo sản phẩm mới */
+h1 {
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #333;
+  }
+  
+  a.new-product {
+    display: inline-block;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    font-size: 1em;
+    border-radius: 4px;
+    text-align: center;
+    margin-bottom: 1rem;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+  }
+  
+  a.new-product:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+  }
+  
+  /* CSS dành cho danh sách sản phẩm */
+  #products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    padding: 1rem;
+  }
+  
+  #products div {
+    background: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    text-align: center;
+  }
+  
+  #products div:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  #products a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-size: 1.125em;
+    transition: color 0.2s ease;
+  }
+  
+  #products a:hover {
+    color: #007bff;
+  }
+  
+  form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 1.5rem;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: #555;
+  }
+  
+  form input[type="text"],
+  form input[type="number"],
+  form textarea,
+  form select {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+  }
+  
+  form input[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    padding: 0.5rem 1rem;
+    font-size: 1em;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+  }
+  
+  form input[type="submit"]:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+  }
+  
+  /* CSS cho nút Cancel */
+  a.cancel-link {
+    display: inline-block;
+    text-decoration: none;
+    color: #555;
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
+    padding: 0.5rem 1rem;
+    font-size: 1em;
+    border-radius: 4px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+  
+  a.cancel-link:hover {
+    background-color: #e2e6ea;
+    color: #333;
+  }
+
+  /* CSS cho phần mô tả sản phẩm */
+.product-description {
+    max-width: 800px;
+    margin: 0 auto 1rem;
+    text-align: center;
+    color: #555;
+    font-size: 1.125em;
+    line-height: 1.6;
+  }
+  
+  /* CSS cho hình ảnh sản phẩm */
+  .product-image {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 1rem auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* CSS cho các nút điều hướng */
+  .action-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  
+  .action-buttons a,
+  .action-buttons button {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 1em;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+  }
+  
+  .action-buttons a {
+    color: #007bff;
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
+  }
+  
+  .action-buttons a:hover {
+    background-color: #e2e6ea;
+    color: #0056b3;
+  }
+  
+  .action-buttons .edit-link {
+    color: white;
+    background-color: #ffc107;
+    border: none;
+  }
+  
+  .action-buttons .edit-link:hover {
+    background-color: #e0a800;
+  }
+  
+  .action-buttons .delete-button {
+    color: white;
+    background-color: #dc3545;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .action-buttons .delete-button:hover {
+    background-color: #c82333;
+  }
+  
+  /* Căn chỉnh nút "Back" */
+  .action-buttons .back-link {
+    color: #555;
+    background-color: #f8f9fa;
+  }
+  
+  .action-buttons .back-link:hover {
+    background-color: #e2e6ea;
+    color: #333;
+  }
+
+  /* CSS cho toàn bộ form */
+form {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* CSS cho mỗi trường nhập liệu */
+  form div {
+    margin-bottom: 1.5rem;
+  }
+  
+  form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: #555;
+    font-size: 1em;
+  }
+  
+  form input[type="text"],
+  form input[type="file"],
+  form textarea,
+  form select,
+  form .trix-content {
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  form .trix-content {
+    min-height: 150px;
+  }
+  
+  /* CSS cho nút gửi form */
+  form input[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    font-size: 1em;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+    display: block;
+    margin: 0 auto;
+  }
+  
+  form input[type="submit"]:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+  }
+  
+  /* CSS dành cho trường file upload */
+  form input[type="file"] {
+    padding: 0.4rem;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    cursor: pointer;
+  }
+  
+  /* Responsive cho thiết bị nhỏ */
+  @media (max-width: 768px) {
+    form {
+      padding: 1rem;
+    }
+  }
+
+  form div {
+    margin-bottom: 1.5rem;
+  }
+  
+  form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: #555;
+  }
+  
+  form input[type="text"],
+  form input[type="file"],
+  form textarea,
+  form select,
+  form .trix-content {
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  form .trix-content {
+    min-height: 150px;
+  }
+  
+  form input[type="submit"] {
+    background-color: #28a745;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    font-size: 1em;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+    display: block;
+    margin: 0 auto;
+  }
+  
+  form input[type="submit"]:hover {
+    background-color: #218838;
+    transform: translateY(-2px);
+  }
+  
+  /* CSS cho nút Cancel */
+  .cancel-link {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 1em;
+    color: #555;
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    margin-top: 1.5rem;
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+  
+  .cancel-link:hover {
+    background-color: #e2e6ea;
+    color: #333;
+    text-decoration: none;
+  }
