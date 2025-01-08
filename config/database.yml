@@ -83,6 +83,7 @@ production:
     <<: *default
     database: newstore_production
     username: newstore
+    url: <%= ENV['DATABASE_URL'] %>
     password: <%= ENV["NEWSTORE_DATABASE_PASSWORD"] %>
   cache:
     <<: *primary_production
