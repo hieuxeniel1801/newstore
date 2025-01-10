@@ -24,13 +24,17 @@
 
   <body>
   <nav class="menu">
+        <div class="header-nav__withSearch">
+        <input type="text" placeholder="Bạn muốn tìm gì?">
+      </div>
+
     <% if !user_signed_in? %>
-      <p class="sign_in"><%= link_to "Login", new_user_session_path %></p>
+      <p class="sign_in"><%= link_to "Đăng Nhập", new_user_session_path %></p>
     <% end %>
     <% if user_signed_in? %>
       <%= button_to "Đăng xuất", destroy_user_session_path, method: :delete %>
     <% end %>
-    <%= link_to "Home", root_path %>
+    <%= link_to "Trang Chủ", root_path %>
   </nav>
   <p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>

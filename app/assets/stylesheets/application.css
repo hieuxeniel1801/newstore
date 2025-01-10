@@ -19,7 +19,7 @@ body {
   nav.menu a,
   nav.menu button {
     text-decoration: none;
-    color: #007bff;
+    color: yellowgreen;
     font-weight: bold;
     font-size: 1em;
     margin: 0 0.5rem;
@@ -29,7 +29,7 @@ body {
   nav.menu a:hover,
   nav.menu button:hover {
     color: #ffffff;
-    background-color: #007bff;
+    background-color: yellowgreen;
     border-radius: 4px;
     padding: 0.25rem 0.5rem;
   }
@@ -205,18 +205,23 @@ h1 {
   .action-buttons {
     display: flex;
     justify-content: center;
-    gap: 1rem;
+    gap: 0.5rem; /* Giảm khoảng cách giữa các nút */
     margin-top: 1rem;
   }
   
   .action-buttons a,
   .action-buttons button {
-    display: inline-block;
+    display: flex; /* Đảm bảo nội dung bên trong căn giữa */
+    justify-content: center;
+    align-items: center;
     text-decoration: none;
-    font-size: 1em;
-    padding: 0.5rem 1rem;
+    font-size: 0.9em; /* Thu nhỏ font chữ */
+    width: 120px; /* Chiều rộng cố định cho tất cả các nút */
+    height: 40px; /* Chiều cao cố định */
+    padding: 0; /* Xóa padding mặc định */
     border-radius: 4px;
     transition: background-color 0.2s ease, transform 0.2s ease;
+    box-sizing: border-box; /* Đảm bảo padding không ảnh hưởng đến kích thước */
   }
   
   .action-buttons a {
@@ -232,24 +237,27 @@ h1 {
   
   .action-buttons .edit-link {
     color: white;
-    background-color: #ffc107;
+    background-color: yellowgreen;
     border: none;
   }
   
   .action-buttons .edit-link:hover {
-    background-color: #e0a800;
+    background-color: whitesmoke;
+    color:yellowgreen;
   }
   
   .action-buttons .delete-button {
     color: white;
-    background-color: #dc3545;
+    background-color: yellowgreen;
     border: none;
     cursor: pointer;
   }
   
   .action-buttons .delete-button:hover {
-    background-color: #c82333;
+    background-color: whitesmoke;
+    color: yellowgreen;
   }
+  
   
   /* Căn chỉnh nút "Back" */
   .action-buttons .back-link {
@@ -401,4 +409,215 @@ form {
     background-color: #e2e6ea;
     color: #333;
     text-decoration: none;
+  }
+  .header-nav__withSearch {
+    display: flex;
+    align-items: center;
+    background-color: yellowgreen; /* Light yellow background */
+    border-radius: 5px; /* Rounded corners */
+    padding: 10px; /* Inner spacing */
+    width: 300px; /* Adjust width */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
+  }
+  
+  .header-nav__withSearch input {
+    border: none; /* Remove border */
+    background: transparent; /* Match background */
+    outline: none; /* Remove outline */
+    font-size: 14px; /* Adjust text size */
+    color: white; /* Text color */
+    flex: 1; /* Expand to fill available space */
+  }
+  
+  .header-nav__withSearch button {
+    background-color: #f4c13d; /* Button yellow color */
+    border: none; /* Remove button border */
+    border-radius: 3px; /* Rounded button */
+    padding: 8px; /* Button spacing */
+    cursor: pointer; /* Pointer cursor */
+  }
+  
+  .header-nav__withSearch button:hover {
+    background-color: #e5b535; /* Darker yellow on hover */
+  }
+  
+  .header-nav__withSearch button img {
+    width: 16px; /* Adjust search icon size */
+    height: 16px;
+  }
+ 
+  h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #444;
+  }
+  
+  .form-container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 1.5rem;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .field {
+    margin-bottom: 1rem;
+  }
+  
+  .form-label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #555;
+  }
+  
+  .form-label-inline {
+    margin-left: 0.5rem;
+    font-weight: normal;
+    color: #555;
+  }
+  
+  .form-input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+  }
+  
+  .form-input:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 4px rgba(0, 123, 255, 0.5);
+  }
+  
+  .form-checkbox {
+    margin-right: 0.5rem;
+  }
+  
+  .actions {
+    text-align: center;
+  }
+  
+  .btn {
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  .btn-primary {
+    background-color: #007bff;
+    border: none;
+  }
+  
+  .btn-primary:hover {
+    background-color: #0056b3;
+  }
+  
+  .form-links {
+    margin-top: 1rem;
+    text-align: center;
+  }
+  
+  .form-links a {
+    color: #007bff;
+    text-decoration: none;
+    font-size: 0.875rem;
+  }
+  
+  .form-links a:hover {
+    text-decoration: underline;
+  }
+  
+  h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #444;
+  }
+  
+  .form-container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 1.5rem;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .field {
+    margin-bottom: 1.5rem;
+  }
+  
+  .form-label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #555;
+  }
+  
+  .hint-text {
+    font-size: 0.875rem;
+    color: #777;
+    margin-left: 0.5rem;
+  }
+  
+  .form-input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+  }
+  
+  .form-input:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 4px rgba(0, 123, 255, 0.5);
+  }
+  
+  .actions {
+    text-align: center;
+  }
+  
+  .btn {
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  .btn-primary {
+    background-color: #007bff;
+    border: none;
+  }
+  
+  .btn-primary:hover {
+    background-color: #0056b3;
+  }
+  
+  .form-links {
+    margin-top: 1rem;
+    text-align: center;
+  }
+  
+  .form-links a {
+    color: #007bff;
+    text-decoration: none;
+    font-size: 0.875rem;
+  }
+  
+  .form-links a:hover {
+    text-decoration: underline;
   }
